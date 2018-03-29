@@ -8,6 +8,6 @@ This application simply ask the github API for all the repository related to a s
 
 There is 2 command implemented : 
 * "/" -> eg: http://localhost:3000/ - this is the default route, the subject is "Football"
-* "/[subject]" -> eg: http://localhost:3000/repository - this is a custom route where you can ask for a different subject
+* "/[subject]" -> eg: http://localhost:3000/repository - this is a custom route where you can ask for a different subject ("repository" in this case)
 
 ### Important : the file config/twitter-config.js must be modified with your credentials in order to use the twitter API
