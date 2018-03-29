@@ -18,8 +18,10 @@ app.use(bodyParser.json())
 app.use('/', root);
 
 // 404 Page
-app.use(function(req, res, next) {
+app.use((req, res, next) => {
     res.status(404).send("The page you seek doesn't exist, please use / or /[your subject here]")
  });
 
 app.listen(3000)
+
+module.exports = app
