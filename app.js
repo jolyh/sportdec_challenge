@@ -14,7 +14,12 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-/*  Route setters */
+/*  Route setter */
 app.use('/', root);
- 
+
+// 404 Page
+app.use(function(req, res, next) {
+    res.status(404).send("The page you seek doesn't exist, please use / or /[your subject here]")
+ });
+
 app.listen(3000)
