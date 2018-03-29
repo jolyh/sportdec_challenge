@@ -32,8 +32,8 @@ router.get('/', function (req, res) {
         .then(result => {
             res.json(result)
         })
-        .catch(statusCode => {
-            res.sendStatus(statusCode)
+        .catch(error => {
+            res.send(error)
         })
 
 });
@@ -56,8 +56,8 @@ router.get('/:subject', function (req, res) {
         .then(result => {
             res.json(result)
         })
-        .catch(statusCode => {
-            res.sendStatus(statusCode)
+        .catch(error => {
+            res.send(error)
         })
 
 });

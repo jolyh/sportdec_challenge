@@ -4,6 +4,8 @@ function resultFormat() {
 
     this.resultFormat = (repoArray, tweetsArray) => {
         return new Promise((resolve, reject) => {
+            if (repoArray.length < 1)
+                reject("Empty repository list")
             var resultArray = []
             repoArray.forEach((repo, i) => {
                 resultArray[i] = this.repositorySummary(repo)
